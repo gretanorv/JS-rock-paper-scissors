@@ -1,0 +1,12 @@
+$breakpoints: (
+    tablet: 1024px,
+    tablet-sm: 856px,
+    mobile-md: 614px,
+    mobile: 480px,
+);
+
+@mixin mq-until($size-name, $breakpoints-map: $breakpoints) {
+    @media (max-width: map-get($breakpoints-map, $size-name)) {
+        @content;
+    }
+}
