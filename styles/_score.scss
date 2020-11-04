@@ -17,6 +17,11 @@
         letter-spacing: 1.3px;
         font-size: 1rem;
         margin-bottom: 0;
+
+        @include mq-until(mobile) {
+            font-size: 0.7rem;
+            letter-spacing: 0;
+        }
     }
 
     &__number {
@@ -25,5 +30,13 @@
         font-weight: 600;
         font-size: 4rem;
         margin: 0;
+
+        @include mq-until(tablet) {
+            font-size: 2rem;
+        }
+
+        @include mq-until(mobile) {
+            font-size: 1.5rem;
+        }
     }
 }

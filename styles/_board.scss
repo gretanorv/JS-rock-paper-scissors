@@ -4,30 +4,83 @@
     background-position: center;
     position: relative;
     margin: 10px;
-    width: 68.5vh;
+    // width: 68.5vh;
     margin: 0 auto;
-    height: 68.5vh;
+    // height: 68.5vh;
+    width: 40vw;
+    height: 40vw;
+
+    @include mq-until(tablet) {
+        height: 70vw;
+        margin-top: 20vw;
+        width: 70vw;
+    }
+
+    @include mq-until(mobile) {
+        background-size: 90%;
+    }
 
     &__select {
         background-color: #fff;
         cursor: pointer;
         position: absolute;
-        width: 180px;
-        height: 180px;
+        // width: 180px;
+        // height: 180px;
         border-radius: 50%;
+        width: 40%;
+        height: 40%;
+
+        // @include mq-until(tablet) {
+        //     height: 120px;
+        //     width: 120px;
+        // }
+
+        // @include mq-until(tablet-sm) {
+        //     height: 130px;
+        //     margin-top: 80px;
+        //     width: 130px;
+        // }
+
+        // @include mq-until(mobile-md) {
+        //     transform: scale(0.6);
+        // }
+
+        @include mq-until(mobile) {
+            height: 90px;
+            width: 90px;
+            margin-top: 0px;
+        }
 
         &#paper {
             top: 15px;
             left: 15px;
             border: 20px solid #5472f4;
-            box-shadow: 0px 10px 0px 0px #2f44a6;
+            box-shadow: 0px 4px 0px 0px #2f44a6;
+
+            @include mq-until(tablet) {
+                top: 0;
+                left: 0;
+            }
+
+            @include mq-until(mobile-md) {
+                border: 10px solid #5472f4;
+            }
         }
 
         &#scissors {
             top: 15px;
             right: 15px;
             border: 20px solid #eca823;
-            box-shadow: 0px 10px 0px 0px #c96b1a;
+            box-shadow: 0px 4px 0px 0px #c96b1a;
+
+            @include mq-until(tablet) {
+                top: 0;
+                right: 0;
+            }
+
+            @include mq-until(mobile-md) {
+                border: 10px solid #eca823;
+            }
         }
 
         &#rock {
@@ -35,7 +88,18 @@
             left: 50%;
             transform: translateX(-50%);
             border: 20px solid #dd3c5d;
-            box-shadow: 0px 10px 0px 0px #9f1635;
+            box-shadow: 0px 4px 0px 0px #9f1635;
+
+            @include mq-until(tablet) {
+                bottom: 20px;
+            }
+
+            @include mq-until(mobile-md) {
+                height: 90px;
+                width: 90px;
+                transform: translateX(-50%);
+                border: 10px solid #dd3c5d;
+            }
         }
 
         &-img {
@@ -43,6 +107,14 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%) scale(1.5);
+
+            @include mq-until(tablet) {
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            @include mq-until(mobile) {
+                transform: translate(-50%, -50%) scale(0.6);
+            }
         }
     }
 }
