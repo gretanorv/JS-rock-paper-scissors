@@ -3,17 +3,19 @@
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    margin: 10px;
-    // width: 68.5vh;
-    margin: 0 auto;
-    // height: 68.5vh;
-    width: 40vw;
-    height: 40vw;
+    margin: 10px auto;
+    width: 36vw;
+    height: 36vw;
 
-    @include mq-until(tablet) {
-        height: 70vw;
-        margin-top: 20vw;
-        width: 70vw;
+    @include mq-until(tablet-sm) {
+        height: 50vw;
+        width: 50vw;
+        margin-top: 50px;
+    }
+
+    @include mq-until(mobile-md) {
+        height: 60vw;
+        width: 60vw;
     }
 
     @include mq-until(mobile) {
@@ -27,10 +29,6 @@
         border-radius: 50%;
         width: 40%;
         height: 40%;
-
-        @include mq-until(tablet-sm) {
-            // transform: scale(2.5);
-        }
 
         @include mq-until(mobile) {
             height: 90px;

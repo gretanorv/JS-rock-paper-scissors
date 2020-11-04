@@ -9,7 +9,7 @@
     width: 100%;
     height: 68.5vh;
 
-    @include mq-until(tablet-sm) {
+    @include mq-until(tablet) {
         justify-content: center;
         top: 15%;
     }
@@ -28,7 +28,12 @@
         align-items: center;
         display: flex;
         flex-direction: column;
+        margin-right: 20px;
         width: 50%;
+
+        @include mq-until(mobile-md) {
+            margin-right: 0px;
+        }
     }
 
     &__center {
@@ -85,7 +90,12 @@
         align-items: center;
         display: flex;
         flex-direction: column;
+        margin-left: 20px;
         width: 50%;
+
+        @include mq-until(mobile-md) {
+            margin-left: 0px;
+        }
     }
 
     &__text {
@@ -94,6 +104,10 @@
         text-transform: uppercase;
         color: #fff;
         letter-spacing: 2px;
+
+        @include mq-until(tablet-sm) {
+            font-size: 2rem;
+        }
 
         @include mq-until(tablet) {
             font-size: 1.3rem;
@@ -113,19 +127,17 @@
         margin-top: 20px;
 
         @include mq-until(tablet-sm) {
-            height: 130px;
             margin-top: 80px;
-            width: 130px;
+            transform: scale(1.3);
         }
 
         @include mq-until(mobile-md) {
-            transform: scale(1.4);
+            transform: scale(0.8);
             margin-top: 20px;
-            margin-bottom: 50px;
         }
 
         @include mq-until(mobile) {
-            transform: scale(0.9);
+            transform: scale(0.7);
             margin-top: 0px;
         }
 
