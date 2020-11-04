@@ -250,11 +250,16 @@
 
 @media (max-width: 614px) {
   .board__select#rock {
+    border: 10px solid #dd3c5d;
+  }
+}
+
+@media (max-width: 480px) {
+  .board__select#rock {
     height: 90px;
     width: 90px;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-    border: 10px solid #dd3c5d;
   }
 }
 
@@ -446,6 +451,12 @@
           justify-content: space-between;
 }
 
+@media (max-width: 856px) {
+  .results__top {
+    width: 100%;
+  }
+}
+
 .results__left {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -457,6 +468,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 50%;
 }
 
 .results__center {
@@ -534,6 +546,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 50%;
 }
 
 .results__text {
@@ -575,34 +588,43 @@
 
 @media (max-width: 614px) {
   .results__placeholder {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+    margin-top: 20px;
+    margin-bottom: 50px;
   }
 }
 
 @media (max-width: 480px) {
   .results__placeholder {
-    -webkit-transform: scale(0.4);
-            transform: scale(0.4);
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
     margin-top: 0px;
   }
 }
 
-.results__placeholder > .board__select {
+.results__placeholder > .board__select,
+.results__placeholder > .board__select#rock {
   cursor: auto;
   top: 50% !important;
   left: 50% !important;
-  -webkit-transform: translate(-50%, -50%) scale(1.5) !important;
-          transform: translate(-50%, -50%) scale(1.5) !important;
+  -webkit-transform: translate(-50%, -50%) !important;
+          transform: translate(-50%, -50%) !important;
   width: 80%;
   height: 80%;
 }
 
 @media (max-width: 856px) {
-  .results__placeholder > .board__select {
-    -webkit-transform: translate(-50%, -50%) scale(2.5) !important;
-            transform: translate(-50%, -50%) scale(2.5) !important;
+  .results__placeholder > .board__select,
+  .results__placeholder > .board__select#rock {
+    -webkit-transform: translate(-50%, -50%) !important;
+            transform: translate(-50%, -50%) !important;
   }
+}
+
+.results__placeholder > .board__select > .board__select-img {
+  -webkit-transform: translate(-50%, -50%) scale(0.6) !important;
+          transform: translate(-50%, -50%) scale(0.6) !important;
 }
 
 * {
