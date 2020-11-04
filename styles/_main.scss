@@ -1,0 +1,49 @@
+.main {
+    position: relative;
+    margin: 30px auto;
+    width: 60%;
+
+    &__results {
+        align-items: center;
+        border: 4px solid rgba(255, 255, 255, 0.3s);
+        border-radius: 15px;
+        color: #fff;
+        display: flex;
+
+        &-title {
+            font-family: $Roboto;
+            text-transform: uppercase;
+            max-width: 20%;
+            line-height: 0.9;
+            font-size: 2.5rem;
+            padding-left: 30px;
+        }
+
+        &-score {
+            margin-left: auto;
+            margin-right: 30px;
+        }
+    }
+
+    &__rules {
+        position: absolute;
+        bottom: 0;
+        cursor: pointer;
+        right: 0;
+        border: 2px solid #fff;
+        font-family: $Roboto;
+        background-color: rgba(0, 0, 0, 0);
+        color: #fff;
+        text-transform: uppercase;
+        padding: 10px 30px;
+        border-radius: 10px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        transition: background-color 0.3s ease;
+
+        &:hover,
+        &:focus {
+            background-color: #15193c;
+        }
+    }
+}

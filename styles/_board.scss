@@ -1,0 +1,48 @@
+.board {
+    background-image: url("../images/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin: 10px;
+    width: 68.5vh;
+    margin: 0 auto;
+    height: 68.5vh;
+
+    &__select {
+        background-color: #fff;
+        cursor: pointer;
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+
+        &#paper {
+            top: 15px;
+            left: 15px;
+            border: 20px solid #5472f4;
+            box-shadow: 0px 10px 0px 0px #2f44a6;
+        }
+
+        &#scissors {
+            top: 15px;
+            right: 15px;
+            border: 20px solid #eca823;
+            box-shadow: 0px 10px 0px 0px #c96b1a;
+        }
+
+        &#rock {
+            bottom: 55px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 20px solid #dd3c5d;
+            box-shadow: 0px 10px 0px 0px #9f1635;
+        }
+
+        &-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1.5);
+        }
+    }
+}

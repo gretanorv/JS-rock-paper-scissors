@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+</head>
+
+<body>
+  <div class="main">
+    <div class="main__results">
+      <h1 class="main__results-title">Rock paper Scissors</h1>
+      <div class="main__results-score score">
+        <p class="score__title">Score</p>
+        <p class="score__number" id="score">0</p>
+      </div>
+    </div>
+
+    <div class="board" id="board1">
+      <div class="board__select" id="paper" onclick="handleClick(this)">
+        <img src="./images/icon-paper.svg" alt="" class="board__select-img">
+      </div>
+      <div class="board__select" id="scissors" onclick="handleClick(this)">
+        <img src="./images/icon-scissors.svg" alt="" class="board__select-img">
+      </div>
+      <div class="board__select" id="rock" onclick="handleClick(this)">
+        <img src="./images/icon-rock.svg" alt="" class="board__select-img">
+      </div>
+    </div>
+
+    <div class="results hide" id="board2">
+
+      <div class="results__left">
+        <h3 class="results__text">You picked</h3>
+        <div class="results__placeholder" id="user"></div>
+      </div>
+
+      <div class="results__center">
+        <span class="results__center-text" id="finalText"></span>
+        <button class="results__center-btn" id="playAgain">Play again</button>
+      </div>
+
+      <div class="results__right">
+        <h3 class="results__text">The House picked</h3>
+        <div class="results__placeholder" id="house"></div>
+      </div>
+
+    </div>
+
+    <button class="main__rules" id="rules">Rules</button>
+  </div>
+
+  <div class="rules-modal hide" id="modal">
+    <div class="rules-modal__inner">
+      <div class="rules-modal__top">
+        <h2 class="rules-modal__top-title">rules</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="rules-modal__top-icon" id="close">
+          <path fill="#3B4262" class="rule-modal__top-icon-fill"
+            d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z"
+            opacity=".25" /></svg>
+      </div>
+      <img src="./images/image-rules.svg" alt="" class="rules-modal__img">
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

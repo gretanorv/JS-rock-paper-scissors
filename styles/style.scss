@@ -1,0 +1,42 @@
+@import "./variables";
+@import "./main";
+@import "./attribution";
+@import "./score";
+@import "./board";
+@import "./rules-modal";
+@import "./results";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(ellipse at top, #1f3656 0%, #15193c 100%);
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+}
+
+.hide {
+    opacity: 0;
+    z-index: -1;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 30px rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
