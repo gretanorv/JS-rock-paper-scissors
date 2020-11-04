@@ -4,7 +4,7 @@
     justify-content: space-around;
     position: absolute;
     left: 50%;
-    top: 25%;
+    top: 30%;
     transform: translateX(-50%);
     width: 100%;
     height: 68.5vh;
@@ -28,8 +28,12 @@
         align-items: center;
         display: flex;
         flex-direction: column;
-        margin-right: 20px;
+        margin-right: 120px;
         width: 50%;
+
+        @include mq-until(tablet) {
+            margin-right: 20px;
+        }
 
         @include mq-until(mobile-md) {
             margin-right: 0px;
@@ -42,6 +46,11 @@
         display: flex;
         flex-direction: column;
         margin: 0 60px;
+        transform: translateY(-200px);
+
+        @include mq-until(tablet) {
+            transform: translateY(0);
+        }
 
         @include mq-until(mobile) {
             width: 100%;
@@ -90,8 +99,12 @@
         align-items: center;
         display: flex;
         flex-direction: column;
-        margin-left: 20px;
+        margin-left: 120px;
         width: 50%;
+
+        @include mq-until(tablet) {
+            margin-left: 20px;
+        }
 
         @include mq-until(mobile-md) {
             margin-left: 0px;
@@ -147,8 +160,8 @@
             top: 50% !important;
             left: 50% !important;
             transform: translate(-50%, -50%) !important;
-            width: 80%;
-            height: 80%;
+            width: 100%;
+            height: 100%;
 
             @include mq-until(tablet-sm) {
                 transform: translate(-50%, -50%) !important;
@@ -156,7 +169,7 @@
         }
 
         & > .board__select > .board__select-img {
-            transform: translate(-50%, -50%) scale(0.6) !important;
+            transform: translate(-50%, -50%) scale(1) !important;
         }
     }
 }
